@@ -1,4 +1,6 @@
-import { observable, computed, action } from 'MobX'
+import { observable, computed, action, useStrict } from 'MobX'
+// 严格模式,非action 不能修改store的数据
+useStrict(true)
 class Store {
   @observable
   tabList = [
